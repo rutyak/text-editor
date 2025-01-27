@@ -7,12 +7,11 @@ import {
   FiImage,
   FiPaperclip,
 } from "react-icons/fi";
-import { BsStars } from "react-icons/bs";
 import { IoIosCopy } from "react-icons/io";
 import { RxAvatar } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Header = () => {
+const Header = ({menuToggle, setMenuToggle}) => {
 
   const iconStyle = "w-5 h-5 mobile:w-4 mobile:h-4 md:w-5 md:h-5";
 
@@ -32,7 +31,8 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <RxAvatar className="w-10 h-10 mobile:w-6 mobile:h-6 md:w-10 md:h-10" />
           </div>
-          <GiHamburgerMenu className="mobile:w-6 mobile:h-6 md:w-10 md:h-10 lg:hidden" />
+          <GiHamburgerMenu onClick={() => setMenuToggle(!menuToggle)}  className="mobile:w-6 mobile:h-6 md:w-10 md:h-10 lg:hidden" />
+          
         </div>
       </div>
 

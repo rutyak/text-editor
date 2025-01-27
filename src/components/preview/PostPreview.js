@@ -42,11 +42,9 @@ const PostPreview = ({ content }) => {
 
   return (
     <div className="w-[42%] flex flex-col items-center h-screen bg-gray-100 space-y-4 mobile:w-[100%] xl:w-[42%]">
-      {/* Header */}
       <div className="w-full flex justify-between items-center space-y-4 bg-white px-4 py-4">
         <h2 className="text-lg font-semibold">Post Preview</h2>
 
-        {/* Device Selector */}
         <div className="flex items-center space-x-4 mobile:hidden lg:block">
           <p>Devices: </p>
           <DeviceIcon
@@ -78,7 +76,6 @@ const PostPreview = ({ content }) => {
             <h3 className="text-lg font-bold">Post Preview</h3>
           </CardHeader>
           <CardContent>
-            {/* User Info */}
             <div className="flex items-center space-x-4">
               <Avatar />
               <div>
@@ -90,13 +87,11 @@ const PostPreview = ({ content }) => {
               </div>
             </div>
 
-            {/* Post Content */}
             <div
               className="text-sm text-gray-700"
               dangerouslySetInnerHTML={{ __html: content }}
             />
 
-            {/* Engagement Stats */}
             <div className="flex items-center space-x-3">
               <div className="flex items-center">
                 <span className="text-sm font-bold text-gray-700">88</span>
@@ -106,7 +101,6 @@ const PostPreview = ({ content }) => {
               <span className="text-xs text-gray-500">1 repost</span>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex justify-between border-t pt-4">
               <Button className="flex items-center space-x-2 text-gray-700">
                 <Heart className="w-4 h-4" />

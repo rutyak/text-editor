@@ -1,6 +1,6 @@
 import React from "react";
 
-const DeviceIcon = ({ icon, label, selected, onClick }) => {
+const DeviceIcon = ({ icon, selected, onClick }) => {
   return (
     <div
       onClick={onClick}

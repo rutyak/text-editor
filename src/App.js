@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div className="w-screen h-screen flex justify-between items-center mobile:flex-col xl:flex-row">
-      <Sidebar menuToggle={menuToggle}/>
-      <WritePostUI setEditorContent={setEditorContent} setMenuToggle={setMenuToggle}/>
+      <Sidebar menuToggle={menuToggle} setMenuToggle={setMenuToggle}/>
+      <WritePostUI setEditorContent={setEditorContent} menuToggle={menuToggle} setMenuToggle={setMenuToggle}/>
       <PostPreview content={editorContent}/>
     </div>
   );

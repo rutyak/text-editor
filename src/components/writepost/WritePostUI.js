@@ -4,7 +4,7 @@ import Header from "./Header";
 import { GrFormSchedule } from "react-icons/gr";
 import { GoPaperAirplane } from "react-icons/go";
 
-const WritePostUI = ({ setEditorContent }) => {
+const WritePostUI = ({ menuToggle, setMenuToggle, setEditorContent }) => {
   const [showToolbar, setShowToolbar] = useState(false);
   const [toolbarPosition, setToolbarPosition] = useState({ top: 0, left: 0 });
   const editorRef = useRef(null);
@@ -45,7 +45,7 @@ const WritePostUI = ({ setEditorContent }) => {
   return (
     <div className="w-[42%] px-1 h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 mobile:h-auto mobile:w-[100%] md:h-screen xl:w-[42%]">
       <div className="w-full h-screen mobile:h-auto mobile:mb-2 md:h-screen">
-        <Header />
+        <Header menuToggle={menuToggle} setMenuToggle={setMenuToggle}/>
         <div>
           <div className="relative">
             <div
@@ -125,7 +125,6 @@ const WritePostUI = ({ setEditorContent }) => {
             </div>
           )}
 
-          {/* Add Icon */}
           <div className="flex items-center justify-between pt-4 border-t bg-white px-4 py-3 mobile:px-3 mobile:py-2 md:px-2 md:py-1">
             <button className="gap-3 px-4 py-2 border rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-3">
               Save As Draft
