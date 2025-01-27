@@ -93,7 +93,7 @@ const Sidebar = ({menuToggle, setMenuToggle}) => {
                 Monthly usage resets in 29 days
               </p>
             </div>
-            <button className="w-full mt-1 border rounded-xl bg-white text-black text-sm font-medium py-2 rounded-lg">
+            <button className="w-full mt-1 border rounded-xl bg-white text-black text-sm font-medium py-2">
               Upgrade Plan
             </button>
           </div>
