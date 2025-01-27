@@ -16,7 +16,7 @@ const Header = ({menuToggle, setMenuToggle}) => {
   const iconStyle = "w-5 h-5 mobile:w-4 mobile:h-4 md:w-5 md:h-5";
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full mx-auto">
       <div className="flex justify-between items-center mb-1 bg-white px-4 py-4">
         <h2 className="text-xl font-semibold  mobile:text-sm md:text-lg lg:text-xl">
           Write Post

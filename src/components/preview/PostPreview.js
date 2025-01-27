@@ -7,7 +7,7 @@ const PostPreview = ({ content }) => {
   const [selectedDevice, setSelectedDevice] = useState("desktop");
 
   const cardButtonStyle = `mobile:hidden md:block ${
-    selectedDevice === "mobile" ? "xl:hidden" : "xl:block"
+    selectedDevice === "mobile" ? "md:hidden" : "md:block"
   }`;
 
   const Button = ({ children, className, ...props }) => (
@@ -50,7 +50,7 @@ const PostPreview = ({ content }) => {
       <div className="w-full flex justify-between items-center bg-white px-4 py-[22px]">
         <h2 className="text-lg font-semibold">Post Preview</h2>
 
-        <div className="flex items-center space-x-4 mobile:hidden lg:block lg:flex lg:items-center lg:space-x-4">
+        <div className="flex items-center space-x-4 mobile:hidden md:block md:flex md:items-center lg:items-center md:space-x-4">
           <p>Devices: </p>
           <DeviceIcon
             icon={<FaMobileAlt />}
@@ -73,8 +73,8 @@ const PostPreview = ({ content }) => {
         </div>
       </div>
 
-      <div className={`flex justify-center items-center`}>
-        <Card className={`w-full ${previewStyles[selectedDevice]}`}>
+      <div className={`flex justify-center items-center mobile:mb-5 md:mb-5 xl:mb-0`}>
+        <Card className={`${previewStyles[selectedDevice]} `}>
           <CardHeader>
             <h3 className="text-lg font-bold">Post Preview</h3>
           </CardHeader>

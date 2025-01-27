@@ -43,8 +43,8 @@ const WritePostUI = ({ menuToggle, setMenuToggle, setEditorContent }) => {
   };
 
   return (
-    <div className="w-[42%] ml-[16%] px-1 h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 mobile:h-auto mobile:w-[100%] md:h-screen xl:w-[42%]">
-      <div className="w-full h-screen mobile:h-auto mobile:mb-2 md:h-screen">
+    <div className="w-[42%] px-1 h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 mobile:h-auto mobile:w-[100%] md:h-auto xl:h-screen xl:ml-[16%] xl:w-[42%]">
+      <div className="w-full h-screen mobile:h-auto mobile:mb-2 xl:h-screen">
         <Header menuToggle={menuToggle} setMenuToggle={setMenuToggle}/>
         <div>
           <div className="relative">

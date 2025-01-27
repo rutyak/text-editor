@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsStars } from "react-icons/bs";
 import { VscLightbulb } from "react-icons/vsc";
 import { FaGripLinesVertical } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { FaCopy } from "react-icons/fa";
 import { MdOutlineContentPasteSearch } from "react-icons/md";
 import { GoGoal } from "react-icons/go";
 import { SlCalender } from "react-icons/sl";
-import { FiEdit, FiMenu, FiX } from "react-icons/fi"; // Added menu icons
+import { FiEdit } from "react-icons/fi"; 
 import { GiSettingsKnobs } from "react-icons/gi";
 import { TiSocialDribbbleCircular } from "react-icons/ti";
 
@@ -29,15 +29,6 @@ const Sidebar = ({menuToggle, setMenuToggle}) => {
     >
       {children}
     </button>
-  );
-
-  const ProgressBar = ({ value, max, className }) => (
-    <div className={`relative ${className}`}>
-      <div
-        className="absolute top-0 left-0 h-full bg-blue-500 rounded-full"
-        style={{ width: `${(value / max) * 100}%` }}
-      ></div>
-    </div>
   );
 
   return (
