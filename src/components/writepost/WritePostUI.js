@@ -43,7 +43,7 @@ const WritePostUI = ({ menuToggle, setMenuToggle, setEditorContent }) => {
   };
 
   return (
-    <div className="w-[42%] px-1 h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 mobile:h-auto mobile:w-[100%] md:h-screen xl:w-[42%]">
+    <div className="w-[42%] ml-[16%] px-1 h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 mobile:h-auto mobile:w-[100%] md:h-screen xl:w-[42%]">
       <div className="w-full h-screen mobile:h-auto mobile:mb-2 md:h-screen">
         <Header menuToggle={menuToggle} setMenuToggle={setMenuToggle}/>
         <div>
@@ -51,7 +51,7 @@ const WritePostUI = ({ menuToggle, setMenuToggle, setEditorContent }) => {
             <div
               contentEditable
               ref={editorRef}
-              className="w-full h-[510px] resize-none border text-base mb-1 bg-white pl-[65px] px-4 py-2 mobile:h-[400px] md:h-[510px]"
+              className="w-full h-[520px] resize-none border text-base mb-1 bg-white pl-[65px] px-4 py-2 mobile:h-[400px] md:h-[515px]"
               onInput={handleInputChange}
               onMouseUp={handleTextSelection}
               onKeyUp={handleTextSelection}
@@ -125,15 +125,15 @@ const WritePostUI = ({ menuToggle, setMenuToggle, setEditorContent }) => {
             </div>
           )}
 
-          <div className="flex items-center justify-between pt-4 border-t bg-white px-4 py-3 mobile:px-3 mobile:py-2 md:px-2 md:py-1">
-            <button className="gap-3 px-4 py-2 border rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-3">
+          <div className="flex items-center justify-between pt-4 border-t bg-white px-4 py-3 mobile:px-3 mobile:py-2 md:px-2 md:py-1 lg:px-4 lg:py-3">
+            <button className="gap-3 px-4 py-2 border rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-2">
               Save As Draft
             </button>
             <div className="flex space-x-2">
-              <button className="flex justify-center items-center gap-3 px-4 py-2 border rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-3">
+              <button className="flex justify-center items-center gap-3 px-4 py-2 border rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-2">
                 <GrFormSchedule /> Schedule
               </button>
-              <button className="flex justify-center items-center gap-3 px-4 py-2 bg-blue-500 text-white rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-3">
+              <button className="flex justify-center items-center gap-3 px-4 py-2 bg-blue-500 text-white rounded-full mobile:gap-1 mobile:text-sm mobile:px-2 mobile:py-1 md:text-md md:gap-3 md:px-3 md:py-2 lg:px-4 lg:py-2">
                 Publish <GoPaperAirplane />
               </button>
             </div>

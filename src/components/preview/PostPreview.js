@@ -6,6 +6,9 @@ import DeviceIcon from "./DeviceIcon";
 const PostPreview = ({ content }) => {
   const [selectedDevice, setSelectedDevice] = useState("desktop");
 
+  const cardButtonStyle = `mobile:hidden md:block ${
+    selectedDevice === "mobile" ? "xl:hidden" : "xl:block"
+  }`;
 
   const Button = ({ children, className, ...props }) => (
     <button
@@ -21,7 +24,9 @@ const PostPreview = ({ content }) => {
   );
 
   const Card = ({ children, className }) => (
-    <div className={`bg-white shadow-md rounded-lg ${className}`}>{children}</div>
+    <div className={`bg-white shadow-md rounded-lg ${className}`}>
+      {children}
+    </div>
   );
 
   const CardHeader = ({ children, className }) => (
@@ -29,23 +34,23 @@ const PostPreview = ({ content }) => {
   );
 
   const CardContent = ({ children, className }) => (
-    <div className={`p-4 space-y-4 ${className}`}>{children}</div>
+    <div className={`p-4 ${className}`}>{children}</div>
   );
 
   const previewStyles = {
-    mobile: "max-w-[360px]",
-    tablet: "max-w-[780px]",
-    desktop: "max-w-[1100px]",
+    mobile: "w-[360px]",
+    tablet: "w-[490px]",
+    desktop: "w-[590px]",
   };
 
   console.log("selectedDevice", previewStyles[selectedDevice]);
 
   return (
     <div className="w-[42%] flex flex-col items-center h-screen bg-gray-100 space-y-4 mobile:w-[100%] xl:w-[42%]">
-      <div className="w-full flex justify-between items-center space-y-4 bg-white px-4 py-4">
+      <div className="w-full flex justify-between items-center bg-white px-4 py-[22px]">
         <h2 className="text-lg font-semibold">Post Preview</h2>
 
-        <div className="flex items-center space-x-4 mobile:hidden lg:block">
+        <div className="flex items-center space-x-4 mobile:hidden lg:block lg:flex lg:items-center lg:space-x-4">
           <p>Devices: </p>
           <DeviceIcon
             icon={<FaMobileAlt />}
@@ -68,15 +73,13 @@ const PostPreview = ({ content }) => {
         </div>
       </div>
 
-      <div
-        className={`flex justify-center items-center ${previewStyles[selectedDevice]}`}
-      >
-        <Card className={`${previewStyles[selectedDevice]} mobile:w-[355px] mobile:mb-10 sm:md-2 md:w-[768px]`}>
+      <div className={`flex justify-center items-center`}>
+        <Card className={`w-full ${previewStyles[selectedDevice]}`}>
           <CardHeader>
             <h3 className="text-lg font-bold">Post Preview</h3>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 mb-6">
               <Avatar />
               <div>
                 <h4 className="text-sm font-bold">Cody Fisher</h4>
@@ -104,19 +107,19 @@ const PostPreview = ({ content }) => {
             <div className="flex justify-between border-t pt-4">
               <Button className="flex items-center space-x-2 text-gray-700">
                 <Heart className="w-4 h-4" />
-                <span className="mobile:hidden md:block">Like</span>
+                <span className={cardButtonStyle}>Like</span>
               </Button>
               <Button className="flex items-center space-x-2 text-gray-700">
                 <MessageCircle className="w-4 h-4" />
-                <span className="mobile:hidden md:block">Comment</span>
+                <span className={cardButtonStyle}>Comment</span>
               </Button>
               <Button className="flex items-center space-x-2 text-gray-700">
                 <Share2 className="w-4 h-4" />
-                <span className="mobile:hidden md:block">Share</span>
+                <span className={cardButtonStyle}>Share</span>
               </Button>
               <Button className="flex items-center space-x-2 text-gray-700">
                 <Send className="w-4 h-4" />
-                <span className="mobile:hidden md:block">Send</span>
+                <span className={cardButtonStyle}>Send</span>
               </Button>
             </div>
           </CardContent>

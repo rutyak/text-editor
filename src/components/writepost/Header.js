@@ -23,7 +23,7 @@ const Header = ({menuToggle, setMenuToggle}) => {
         </h2>
         <div className="flex gap-10 items-center">
           <button className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-600 text-sm font-medium mobile:ml-0.5 mobile:px-1 mobile:py-0.5 md:px-3 md:py-1.5">
-            <span className="mobile:text-[10px] md:text-[12px] lg:text-lg">
+            <span className="mobile:text-[10px] md:text-[12px] lg:text-[15px]">
               Check Score
             </span>
           </button>{" "}
